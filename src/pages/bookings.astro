@@ -1,0 +1,109 @@
+---
+import Layout from '~/layouts/Layout.astro'
+import Header from '~/components/Header.astro'
+import Footer from '~/components/Footer.astro'
+---
+
+<Layout title="Bookings">
+  <div class="absolute right-8 top-8">
+    <button class="text-light-900 dark:text-dark-50" id="theme-toggle" type="button">Light</button>
+    <script src="../scripts/theme-toggle.js"></script>
+  </div>
+
+  <Header />
+
+  <div class="flex flex-col items-center gap-16 py-16 lg:py-24">
+    <div class="w-full max-w-screen-xl px-4 md:px-8">
+      <div class="flex flex-col gap-8">
+        <div class="mx-auto flex max-w-sm flex-col gap-4 md:mx-0 md:max-w-screen-md lg:gap-6">
+          <h1
+            class="font-display text-display-md font-semibold tracking-tight text-light-900 dark:text-dark-50 lg:text-display-lg"
+          >
+            Training Courses
+          </h1>
+          <p class="text-lg text-light-600 dark:text-dark-400 lg:text-xl">
+            California Tactical Academy offers tactical and competition training courses at the
+            largest outdoor shooting range in Los Angeles for beginners, intermediate and advanced
+            shooters. Learn and enjoy shooting sports with your family and friends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center gap-16 py-12">
+    <div class="w-full max-w-screen-xl px-4 md:px-8">
+      <div class="flex flex-col gap-12">
+        <div>
+          <!-- Horizontal tabs -->
+        </div>
+
+        <!-- Grid -->
+        <div
+          class="mx-auto grid max-w-sm gap-8 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3"
+        >
+          {
+            [...Array(6).keys()].map(() => (
+              <div class="overflow-hidden rounded-2xl border border-light-200 dark:border-dark-800">
+                <div class="relative">
+                  <img
+                    class="h-full object-cover"
+                    src="/images/courses/01.jpg"
+                    alt="Training Course"
+                  />
+                  <div class="absolute inset-x-0 bottom-0 border-t border-white/30 bg-white/30 p-4 backdrop-blur-md dark:border-light-950/30 dark:bg-light-950/30">
+                    <div class="flex justify-between text-sm text-white">
+                      <div>
+                        <div class="font-semibold">$249.99</div>
+                        <div>8:30 AM to 4:00 PM</div>
+                      </div>
+
+                      <div class="font-semibold">Beginner</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-6 bg-white px-5 pb-6 pt-5 dark:bg-dark-900">
+                  <div class="flex flex-col gap-2">
+                    <h3 class="text-xl font-semibold text-light-900 dark:text-dark-50">
+                      Women Beginner Pistol Course Level 1
+                    </h3>
+                    <p class="text-light-600 dark:text-dark-400">
+                      Lorem ipsum dolor sit amet consectetur. Laoreet nunc hac adipiscing
+                      adipiscing. Sollicitudin nec.
+                    </p>
+                  </div>
+
+                  <div>
+                    <a
+                      class="inline-flex items-center justify-center gap-2 font-semibold text-brand-700 dark:text-dark-300"
+                      href="#"
+                    >
+                      <span>Book now</span>
+                      <svg
+                        class="h-5 w-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.667"
+                          d="m5.833 14.167 8.334-8.334m0 0H5.833m8.334 0v8.334"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>

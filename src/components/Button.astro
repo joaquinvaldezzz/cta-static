@@ -1,0 +1,19 @@
+---
+interface Props {
+  type: 'link' | 'button'
+}
+
+const { type } = Astro.props
+---
+
+{
+  type === 'link' ? (
+    <a class="font-semibold dark:text-dark-50 dark:hover:bg-dark-800" href="">
+      <slot />
+    </a>
+  ) : (
+    <button type="button">
+      <slot />
+    </button>
+  )
+}

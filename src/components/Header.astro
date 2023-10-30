@@ -1,0 +1,200 @@
+---
+import CompanyLogo from './CompanyLogo.astro'
+---
+
+<style is:global>
+  :root {
+    --header-height: 5rem;
+  }
+</style>
+
+<header
+  class="absolute inset-x-0 top-0 z-40 flex h-20 items-center justify-center backdrop-blur-md dark:bg-dark-950/75"
+>
+  <div class="mx-auto flex max-w-7xl flex-1 items-center justify-between px-4 md:px-8">
+    <div class="flex items-center gap-10">
+      <a href="/">
+        <span class="sr-only">Company Logo</span>
+        <CompanyLogo className="h-12 w-40" />
+      </a>
+
+      <nav class="hidden lg:flex lg:items-center lg:gap-8">
+        <a
+          class="font-semibold text-gray-dark-400 transition-colors hover:text-gray-dark-200"
+          href="#"
+        >
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden lg:flex lg:items-center lg:gap-3">
+        <a
+          class="rounded px-4 py-2.5 font-semibold text-gray-dark-400 transition-colors hover:bg-gray-dark-800 hover:text-gray-dark-200"
+          href="/account/login"
+        >
+          Log in
+        </a>
+
+        <a
+          class="rounded bg-brand-600 px-4 py-2.5 font-semibold text-white transition-colors hover:bg-brand-700"
+          href="/account/register"
+        >
+          Sign up
+        </a>
+      </div>
+
+      <button
+        class="flex h-11 w-11 items-center justify-center lg:hidden"
+        id="nav-menu-button"
+        type="button"
+      >
+        <svg
+          class="h-5 w-5 text-gray-dark-400"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 20 20"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.667"
+            d="M2.5 10h15m-15-5h15m-15 10h15"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div
+  class="absolute inset-x-0 top-[--header-height] z-50 hidden bg-light-25 dark:bg-dark-950 lg:hidden"
+  id="nav-menu"
+>
+  <ul class="flex flex-col gap-2 border-b py-6 dark:border-dark-800">
+    <li>
+      <a
+        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
+        href="#"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
+        href="#"
+      >
+        Products
+      </a>
+    </li>
+    <li>
+      <a
+        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
+        href="#"
+      >
+        Resources
+      </a>
+    </li>
+    <li>
+      <a
+        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
+        href="#"
+      >
+        Pricing
+      </a>
+    </li>
+  </ul>
+
+  <div class="flex flex-col gap-8 py-6">
+    <div class="grid grid-cols-2 gap-6 px-4">
+      <ul class="flex flex-col gap-3">
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            About us
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            Press
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            Careers
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            Legal
+          </a>
+        </li>
+      </ul>
+
+      <ul class="flex flex-col gap-3">
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            About us
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            Press
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            Careers
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+            href="#"
+          >
+            Legal
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col gap-3 px-4">
+      <a
+        class="flex items-center justify-center rounded border border-brand-600 bg-brand-600 px-4 py-2.5 text-center font-semibold text-white transition-colors hover:border-brand-700 hover:bg-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-600/25"
+        href="#"
+      >
+        Sign up
+      </a>
+      <a
+        class="flex items-center justify-center rounded border border-dark-700 bg-dark-900 px-4 py-2.5 text-center font-semibold text-white transition-colors hover:border-dark-700 hover:bg-dark-800 focus:outline-none focus:ring-4 focus:ring-dark-600/25"
+        href="#"
+      >
+        Log in
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="../scripts/mobile-menu.js"></script>
