@@ -16,7 +16,7 @@ module.exports = {
     dark: colors.dark[800],
   },
 
-  'border-disabled': {
+  'disabled-border': {
     DEFAULT: colors.light[300],
     dark: colors.dark[700],
 
@@ -26,12 +26,12 @@ module.exports = {
     },
   },
 
-  'border-brand': {
+  'brand-border': {
     DEFAULT: colors.brand[300],
     dark: colors.brand[400],
   },
 
-  'border-brand-solid': {
+  'brand-border-solid': {
     DEFAULT: colors.brand[600],
     dark: colors.brand[500],
 
@@ -41,7 +41,7 @@ module.exports = {
     },
   },
 
-  'border-error': {
+  'error-border': {
     DEFAULT: colors.error[300],
     dark: colors.error[400],
 
