@@ -63,6 +63,10 @@ module.exports = {
         ...buttonTertiaryErrorVariables,
       },
 
+      data: {
+        status: 'status="true"',
+      },
+
       fontFamily: {
         sans: ['Mona Sans', ...fontFamily.sans],
         display: [
