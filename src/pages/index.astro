@@ -6,8 +6,8 @@ const pages = await Astro.glob('./*.astro')
 
 <Layout title="Dashboard">
   <main class="mx-auto max-w-2xl px-4 py-16 md:px-8 md:py-24">
-    <h1>Pages</h1>
-    <ul class="mt-4 list-inside list-disc">
+    <h1 class="text-display-xs font-semibold text-primary dark:text-primary-dark">Pages</h1>
+    <ul class="mt-4 list-inside list-disc text-secondary dark:text-secondary-dark">
       {
         pages.map((page) => {
           return (
