@@ -2,13 +2,14 @@ import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
+  compressHTML: false,
   vite: {
     build: {
       rollupOptions: {
         output: {
           assetFileNames: 'assets/[hash][extname]',
-          // chunkFileNames: 'assets/[hash].js',
-          // entryFileNames: 'assets/[hash].js',
+          // chunkFileNames: 'assets/[name].[hash].js',
+          entryFileNames: 'assets/[name].[hash].js',
         },
       },
     },
