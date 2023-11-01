@@ -62,8 +62,8 @@ module.exports = {
   },
 
   'disabled-bg': {
-    DEFAULT: colors.light[50],
-    dark: colors.dark[900],
+    DEFAULT: colors.light[100],
+    dark: colors.dark[800],
 
     subtle: {
       DEFAULT: colors.light[50],
