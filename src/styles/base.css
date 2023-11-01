@@ -1,8 +1,5 @@
 @import 'tailwindcss/base';
-
-:root {
-  --header-height: 5rem;
-}
+@import 'variables';
 
 @font-face {
   font-family: 'Mona Sans';

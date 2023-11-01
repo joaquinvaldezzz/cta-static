@@ -1,0 +1,13 @@
+:root {
+  /* Text color variables */
+  --text-primary: theme('colors.light.900');
+  --text-primary-dark: theme('colors.dark.50');
+  --text-primary-on-brand: theme('colors.white');
+  --text-primary-on-brand-dark: theme('colors.dark.50');
+
+  --text-secondary: theme('colors.light.700');
+  --text-secondary-dark: theme('colors.dark.300');
+
+  /* Others */
+  --header-height: 5rem;
+}

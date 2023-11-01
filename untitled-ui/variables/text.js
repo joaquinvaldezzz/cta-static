@@ -2,18 +2,18 @@ const colors = require('../colors')
 
 module.exports = {
   primary: {
-    DEFAULT: colors.light[900],
-    dark: colors.dark[50],
+    DEFAULT: 'var(--text-primary)',
+    dark: 'var(--text-primary-dark)',
 
     'on-brand': {
-      DEFAULT: colors.white,
-      dark: colors.dark[50],
+      DEFAULT: 'var(--text-primary-on-brand)',
+      dark: 'var(--text-primary-on-brand-dark)',
     },
   },
 
   secondary: {
-    DEFAULT: colors.light[700],
-    dark: colors.dark[300],
+    DEFAULT: 'var(--text-secondary)',
+    dark: 'var(--text-secondary-dark)',
 
     hover: {
       DEFAULT: colors.light[800],
