@@ -1,4 +1,6 @@
 ---
+import LogOutIcon from '~/snippets/icon-log-out.astro'
+import ShoppingCartIcon from '~/snippets/icon-shopping-cart.astro'
 import CompanyLogo from './CompanyLogo.astro'
 ---
 
@@ -29,7 +31,7 @@ import CompanyLogo from './CompanyLogo.astro'
     </div>
 
     <div class="flex items-center gap-3">
-      <div class="hidden lg:flex lg:items-center lg:gap-3">
+      <div class="hidden lg:hidden lg:items-center lg:gap-3">
         <a
           class="rounded px-4 py-2.5 font-semibold text-gray-dark-400 transition-colors hover:bg-gray-dark-800 hover:text-gray-dark-200"
           href="/account/login"
@@ -43,6 +45,61 @@ import CompanyLogo from './CompanyLogo.astro'
         >
           Sign up
         </a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a class="relative flex h-10 w-10 items-center justify-center" href="#">
+          <span class="sr-only">Shopping Cart</span>
+          <ShoppingCartIcon
+            className="h-5 w-5 text-button-tertiary-fg dark:text-button-tertiary-fg-dark"
+          />
+          <div
+            class="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-brand-200 bg-brand-50 dark:border-brand-800 dark:bg-brand-950"
+          >
+            <span class="text-xs font-medium text-brand-700 dark:text-brand-300">1</span>
+          </div>
+        </a>
+
+        <div class="relative">
+          <button
+            class="h-10 w-10 rounded-full border border-[#98a2b3] focus:ring-4 focus:ring-[#98a2b3]/[0.14]"
+            id="profile-dropdown"
+            type="button"
+          >
+          </button>
+
+          <div
+            class="absolute right-0 mt-2 hidden min-w-[15rem] rounded border border-secondary-border bg-primary-bg shadow-lg dark:border-secondary-border-dark dark:bg-primary-bg-dark"
+            id="profile-dropdown-menu"
+          >
+            <div
+              class="border-b border-secondary-border px-4 py-3 dark:border-secondary-border-dark"
+            >
+              <div class="flex items-center gap-3">
+                <!-- <div class="h-10 w-10 rounded-full border"></div> -->
+                <div class="text-sm">
+                  <div class="font-semibold text-secondary dark:text-secondary-dark">
+                    Joaquin Valdez
+                  </div>
+                  <div class="text-tertiary dark:text-tertiary-dark">olivia@untitledui.com</div>
+                </div>
+              </div>
+            </div>
+            <ul class="flex flex-col py-1">
+              <li class="px-1.5 py-px">
+                <a
+                  class="flex items-center gap-2 rounded-md px-2.5 py-2 transition-colors hover:bg-primary-bg-hover dark:hover:bg-primary-bg-hover-dark"
+                  href="#"
+                >
+                  <LogOutIcon className="h-4 w-4 text-quarterary-fg dark:text-quarterary-fg-dark" />
+                  <span class="text-sm font-medium text-secondary dark:text-secondary-dark">
+                    Log out
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <button
@@ -69,7 +126,7 @@ import CompanyLogo from './CompanyLogo.astro'
 </header>
 
 <div
-  class="absolute inset-x-0 top-[--header-height] z-50 hidden bg-light-25 dark:bg-dark-950 lg:hidden"
+  class="absolute inset-x-0 top-header z-50 hidden bg-light-25 dark:bg-dark-950 lg:hidden"
   id="nav-menu"
 >
   <ul class="flex flex-col gap-2 border-b py-6 dark:border-dark-800">
@@ -198,3 +255,4 @@ import CompanyLogo from './CompanyLogo.astro'
 </div>
 
 <script src="../scripts/mobile-menu.js"></script>
+<script src="../scripts/profile-dropdown.js"></script>
