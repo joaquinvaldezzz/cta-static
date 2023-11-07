@@ -29,7 +29,7 @@ module.exports = {
     './src/snippets/**/*.astro',
     './src/scripts/**/*.js',
   ],
-  darkMode: 'class',
+  // darkMode: 'class',
   future: {
     disableColorOpacityUtilitiesByDefault: true,
   },
@@ -40,6 +40,9 @@ module.exports = {
       padding: {
         DEFAULT: '1rem',
         md: '2rem',
+      },
+      screens: {
+        xl: '1280px',
       },
     },
 
