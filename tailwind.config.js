@@ -67,6 +67,7 @@ module.exports = {
 
       data: {
         status: 'status="true"',
+        error: 'error="true"',
       },
 
       fontFamily: {
