@@ -4,255 +4,257 @@ import ShoppingCartIcon from '~/snippets/icon-shopping-cart.astro'
 import CompanyLogo from './CompanyLogo.astro'
 ---
 
-<style is:global>
-  :root {
-    --header-height: 5rem;
-  }
-</style>
-
 <header
-  class="absolute inset-x-0 top-0 z-40 flex h-20 items-center justify-center backdrop-blur-md dark:bg-dark-950/75"
+  class="absolute inset-x-0 top-0 z-40 flex h-header items-center bg-primary-bg backdrop-blur-md dark:bg-primary-bg-dark/75"
 >
-  <div class="mx-auto flex max-w-7xl flex-1 items-center justify-between px-4 md:px-8">
-    <div class="flex items-center gap-10">
+  <div class="container flex flex-1 items-center">
+    <div class="flex flex-1 items-center gap-10">
       <a href="/">
         <span class="sr-only">Company Logo</span>
-        <CompanyLogo className="h-12 w-40" />
+        <CompanyLogo className="h-12 w-40 text-primary-fg dark:text-primary-fg-dark" />
       </a>
 
-      <nav class="hidden lg:flex lg:items-center lg:gap-8">
+      <nav class="hidden lg:flex">
+        <ul class="flex items-center gap-8">
+          <li>
+            <a
+              class="font-semibold text-button-tertiary-fg transition hover:text-button-tertiary-fg-hover dark:text-button-tertiary-fg-dark dark:hover:text-button-tertiary-fg-hover-dark"
+              href="#"
+            >
+              Home
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="ml-auto flex items-center gap-3">
+        <div class="hidden lg:hidden lg:items-center lg:gap-3">
+          <a
+            class="rounded px-4 py-2.5 font-semibold text-gray-dark-400 transition-colors hover:bg-gray-dark-800 hover:text-gray-dark-200"
+            href="/account/login"
+          >
+            Log in
+          </a>
+
+          <a
+            class="rounded bg-brand-600 px-4 py-2.5 font-semibold text-white transition-colors hover:bg-brand-700"
+            href="/account/register"
+          >
+            Sign up
+          </a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a class="relative flex h-10 w-10 items-center justify-center" href="#">
+            <span class="sr-only">Shopping cart</span>
+            <ShoppingCartIcon
+              className="h-5 w-5 text-button-tertiary-fg dark:text-button-tertiary-fg-dark"
+            />
+            <div
+              class="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-brand-200 bg-brand-50 dark:border-brand-800 dark:bg-brand-950"
+            >
+              <span class="text-xs font-medium text-brand-700 dark:text-brand-300">1</span>
+            </div>
+          </a>
+
+          <div class="relative">
+            <button
+              class="h-10 w-10 rounded-full border border-light-400 focus:ring-4 focus:ring-light-400/[0.14]"
+              id="profile-dropdown"
+              type="button"
+            >
+            </button>
+
+            <div
+              class="absolute right-0 mt-2 hidden w-60 rounded border border-secondary-border bg-primary-bg shadow-lg dark:border-secondary-border-dark dark:bg-primary-bg-dark"
+              id="profile-dropdown-menu"
+            >
+              <div
+                class="border-b border-secondary-border px-4 py-3 dark:border-secondary-border-dark"
+              >
+                <div class="flex items-center gap-3">
+                  <!-- <div class="h-10 w-10 rounded-full border"></div> -->
+                  <div class="text-sm">
+                    <div class="font-semibold text-secondary dark:text-secondary-dark">
+                      Joaquin Valdez
+                    </div>
+                    <div class="text-tertiary dark:text-tertiary-dark">olivia@untitledui.com</div>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="flex flex-col py-1">
+                <li class="px-1.5 py-px">
+                  <a
+                    class="flex items-center gap-2 rounded-md px-2.5 py-2 transition-colors hover:bg-primary-bg-hover dark:hover:bg-primary-bg-hover-dark"
+                    href="#"
+                  >
+                    <span class="sr-only">Log out icon</span>
+                    <LogOutIcon
+                      className="h-4 w-4 text-quarterary-fg dark:text-quarterary-fg-dark"
+                    />
+                    <span class="text-sm font-medium text-secondary dark:text-secondary-dark">
+                      Log out
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="flex h-11 w-11 items-center justify-center lg:hidden"
+          id="nav-menu-button"
+          type="button"
+        >
+          <svg
+            class="h-5 w-5 text-gray-dark-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.667"
+              d="M2.5 10h15m-15-5h15m-15 10h15"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="absolute inset-x-0 top-header z-50 hidden bg-light-25 dark:bg-dark-950 lg:hidden"
+    id="nav-menu"
+  >
+    <ul class="flex flex-col gap-2 border-b py-6 dark:border-dark-800">
+      <li>
         <a
-          class="font-semibold text-gray-dark-400 transition-colors hover:text-gray-dark-200"
+          class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
           href="#"
         >
           Home
         </a>
-      </nav>
-    </div>
-
-    <div class="flex items-center gap-3">
-      <div class="hidden lg:hidden lg:items-center lg:gap-3">
+      </li>
+      <li>
         <a
-          class="rounded px-4 py-2.5 font-semibold text-gray-dark-400 transition-colors hover:bg-gray-dark-800 hover:text-gray-dark-200"
-          href="/account/login"
+          class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
+          href="#"
         >
-          Log in
+          Products
         </a>
-
+      </li>
+      <li>
         <a
-          class="rounded bg-brand-600 px-4 py-2.5 font-semibold text-white transition-colors hover:bg-brand-700"
-          href="/account/register"
+          class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
+          href="#"
+        >
+          Resources
+        </a>
+      </li>
+      <li>
+        <a
+          class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
+          href="#"
+        >
+          Pricing
+        </a>
+      </li>
+    </ul>
+
+    <div class="flex flex-col gap-8 py-6">
+      <div class="grid grid-cols-2 gap-6 px-4">
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              About us
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              Press
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              Careers
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              Legal
+            </a>
+          </li>
+        </ul>
+
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              About us
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              Press
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              Careers
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
+              href="#"
+            >
+              Legal
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-3 px-4">
+        <a
+          class="flex items-center justify-center rounded border border-brand-600 bg-brand-600 px-4 py-2.5 text-center font-semibold text-white transition-colors hover:border-brand-700 hover:bg-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-600/25"
+          href="#"
         >
           Sign up
         </a>
-      </div>
-
-      <div class="flex items-center gap-4">
-        <a class="relative flex h-10 w-10 items-center justify-center" href="#">
-          <span class="sr-only">Shopping Cart</span>
-          <ShoppingCartIcon
-            className="h-5 w-5 text-button-tertiary-fg dark:text-button-tertiary-fg-dark"
-          />
-          <div
-            class="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-brand-200 bg-brand-50 dark:border-brand-800 dark:bg-brand-950"
-          >
-            <span class="text-xs font-medium text-brand-700 dark:text-brand-300">1</span>
-          </div>
-        </a>
-
-        <div class="relative">
-          <button
-            class="h-10 w-10 rounded-full border border-[#98a2b3] focus:ring-4 focus:ring-[#98a2b3]/[0.14]"
-            id="profile-dropdown"
-            type="button"
-          >
-          </button>
-
-          <div
-            class="absolute right-0 mt-2 hidden min-w-[15rem] rounded border border-secondary-border bg-primary-bg shadow-lg dark:border-secondary-border-dark dark:bg-primary-bg-dark"
-            id="profile-dropdown-menu"
-          >
-            <div
-              class="border-b border-secondary-border px-4 py-3 dark:border-secondary-border-dark"
-            >
-              <div class="flex items-center gap-3">
-                <!-- <div class="h-10 w-10 rounded-full border"></div> -->
-                <div class="text-sm">
-                  <div class="font-semibold text-secondary dark:text-secondary-dark">
-                    Joaquin Valdez
-                  </div>
-                  <div class="text-tertiary dark:text-tertiary-dark">olivia@untitledui.com</div>
-                </div>
-              </div>
-            </div>
-            <ul class="flex flex-col py-1">
-              <li class="px-1.5 py-px">
-                <a
-                  class="flex items-center gap-2 rounded-md px-2.5 py-2 transition-colors hover:bg-primary-bg-hover dark:hover:bg-primary-bg-hover-dark"
-                  href="#"
-                >
-                  <LogOutIcon className="h-4 w-4 text-quarterary-fg dark:text-quarterary-fg-dark" />
-                  <span class="text-sm font-medium text-secondary dark:text-secondary-dark">
-                    Log out
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <button
-        class="flex h-11 w-11 items-center justify-center lg:hidden"
-        id="nav-menu-button"
-        type="button"
-      >
-        <svg
-          class="h-5 w-5 text-gray-dark-400"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 20 20"
+        <a
+          class="flex items-center justify-center rounded border border-dark-700 bg-dark-900 px-4 py-2.5 text-center font-semibold text-white transition-colors hover:border-dark-700 hover:bg-dark-800 focus:outline-none focus:ring-4 focus:ring-dark-600/25"
+          href="#"
         >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.667"
-            d="M2.5 10h15m-15-5h15m-15 10h15"></path>
-        </svg>
-      </button>
+          Log in
+        </a>
+      </div>
     </div>
   </div>
+
+  <script src="../scripts/mobile-menu.js"></script>
+  <script src="../scripts/profile-dropdown.js"></script>
 </header>
-
-<div
-  class="absolute inset-x-0 top-header z-50 hidden bg-light-25 dark:bg-dark-950 lg:hidden"
-  id="nav-menu"
->
-  <ul class="flex flex-col gap-2 border-b py-6 dark:border-dark-800">
-    <li>
-      <a
-        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
-        href="#"
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a
-        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
-        href="#"
-      >
-        Products
-      </a>
-    </li>
-    <li>
-      <a
-        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
-        href="#"
-      >
-        Resources
-      </a>
-    </li>
-    <li>
-      <a
-        class="flex items-center px-4 py-3 font-semibold transition-colors dark:text-dark-50 dark:hover:bg-dark-800"
-        href="#"
-      >
-        Pricing
-      </a>
-    </li>
-  </ul>
-
-  <div class="flex flex-col gap-8 py-6">
-    <div class="grid grid-cols-2 gap-6 px-4">
-      <ul class="flex flex-col gap-3">
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            About us
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            Press
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            Careers
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            Legal
-          </a>
-        </li>
-      </ul>
-
-      <ul class="flex flex-col gap-3">
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            About us
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            Press
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            Careers
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center font-semibold transition-colors dark:text-dark-400 dark:hover:bg-dark-200"
-            href="#"
-          >
-            Legal
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="flex flex-col gap-3 px-4">
-      <a
-        class="flex items-center justify-center rounded border border-brand-600 bg-brand-600 px-4 py-2.5 text-center font-semibold text-white transition-colors hover:border-brand-700 hover:bg-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-600/25"
-        href="#"
-      >
-        Sign up
-      </a>
-      <a
-        class="flex items-center justify-center rounded border border-dark-700 bg-dark-900 px-4 py-2.5 text-center font-semibold text-white transition-colors hover:border-dark-700 hover:bg-dark-800 focus:outline-none focus:ring-4 focus:ring-dark-600/25"
-        href="#"
-      >
-        Log in
-      </a>
-    </div>
-  </div>
-</div>
-
-<script src="../scripts/mobile-menu.js"></script>
-<script src="../scripts/profile-dropdown.js"></script>
