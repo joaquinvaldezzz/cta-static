@@ -26,8 +26,9 @@ module.exports = {
     './src/components/**/*.astro',
     './src/layouts/**/*.astro',
     './src/pages/**/*.astro',
-    './src/snippets/**/*.astro',
     './src/scripts/**/*.js',
+    './src/sections/**/*.astro',
+    './src/snippets/**/*.astro',
   ],
   // darkMode: 'class',
   future: {

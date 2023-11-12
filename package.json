@@ -8,19 +8,17 @@
     "dev": "astro dev",
     "format": "prettier --write .",
     "format:astro": "prettier --write src/**/*.astro",
-    "lint:js": "eslint --ext .js",
-    "lint:scss": "stylelint --fix 'src/styles/**/*.scss'",
+    "lint": "eslint --ext .js",
     "preview": "astro preview",
     "start": "astro dev"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.7",
-    "astro": "^3.5.3",
-    "tailwindcss": "^3.3.5"
+    "@tailwindcss/forms": "^0.5.7"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^3.2.2",
     "@tailwindcss/typography": "^0.5.10",
+    "astro": "^3.5.3",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "eslint": "^8.53.0",
@@ -36,11 +34,6 @@
     "prettier-plugin-astro": "^0.12.1",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "sass": "^1.69.5",
-    "stylelint": "^15.11.0",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^11.1.0",
-    "stylelint-order": "^6.0.3",
-    "stylelint-prettier": "^4.0.2",
-    "stylelint-scss": "^5.3.1"
+    "tailwindcss": "^3.3.5"
   }
 }

@@ -1,5 +1,3 @@
-const sorting = require('./utils/sorting.cjs')
-
 module.exports = {
   plugins: {
     autoprefixer: {},
@@ -12,11 +10,6 @@ module.exports = {
       ],
     },
     'postcss-sort-media-queries': {},
-    'postcss-sorting': {
-      order: [...sorting.order],
-      'properties-order': [...sorting.propertiesOrder],
-      'unspecified-properties-position': 'bottom',
-    },
     tailwindcss: {},
   },
 }
