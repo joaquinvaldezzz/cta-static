@@ -1,5 +1,9 @@
 @import 'tailwindcss/components';
 
 .section {
-  @apply py-16 lg:py-24;
+  @apply py-16;
+
+  @include lg {
+    @apply py-24;
+  }
 }
