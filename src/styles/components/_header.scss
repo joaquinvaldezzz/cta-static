@@ -1,0 +1,16 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  background-color: theme('colors.primary-bg.DEFAULT');
+  backdrop-filter: blur(16px);
+
+  @include dark {
+    background-color: theme('colors.primary-bg.dark/75');
+  }
+}
