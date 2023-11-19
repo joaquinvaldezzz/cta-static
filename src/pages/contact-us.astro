@@ -1,0 +1,68 @@
+---
+import Layout from '~/layouts/Layout.astro'
+---
+
+<Layout title="Contact us">
+  <div class="flex flex-col gap-12 py-16 lg:py-24">
+    <div class="relative">
+      <div class="relative z-10 flex flex-col gap-4 text-center lg:gap-6">
+        <h2 class="font-display text-display-md font-semibold text-primary lg:text-display-lg">
+          Contact us
+        </h2>
+        <p class="text-lg text-tertiary lg:text-xl">
+          Our friendly team would love to hear from you.
+        </p>
+      </div>
+    </div>
+
+    <div class="mx-auto flex w-full max-w-[480px] flex-col items-center gap-8 px-4 md:px-8">
+      <form class="flex w-full flex-col gap-6" action="">
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-secondary" for="first-name">First name</label>
+          <input
+            class="rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="first-name"
+            name="customer[first_name]"
+            type="email"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-secondary" for="last-name">Last name</label>
+          <input
+            class="rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="last-name"
+            name="customer[last_name]"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-secondary" for="email-address">Email address</label
+          >
+          <input
+            class="rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="email-address"
+            name="customer[email]"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium" for="message">Message</label>
+          <textarea
+            class="min-h-[12rem] rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="message"
+            name="contact[body]"></textarea>
+        </div>
+
+        <button
+          class="rounded border bg-button-primary-bg px-4 py-2.5 font-semibold text-button-primary-fg transition hover:bg-button-primary-bg-hover focus:border-button-primary-border focus:outline-none focus:ring-4 focus:ring-brand-600/25"
+          type="submit"
+        >
+          Send message
+        </button>
+      </form>
+    </div>
+  </div>
+</Layout>
