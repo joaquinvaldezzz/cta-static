@@ -8,3 +8,7 @@
     @apply py-24;
   }
 }
+
+.errors {
+  @apply rounded border border-error-border-solid bg-error-50 px-3.5 py-2.5 text-error-primary;
+}
