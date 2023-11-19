@@ -15,7 +15,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": ["*.config.cjs"]
+        "devDependencies": ["*.config.cjs", "*.config.mjs"]
       }
     ]
   }
