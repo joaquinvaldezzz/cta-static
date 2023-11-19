@@ -1,0 +1,88 @@
+---
+import Layout from '~/layouts/Layout.astro'
+---
+
+<Layout title="Register">
+  <div class="flex flex-col gap-8 overflow-x-hidden pb-12 pt-32 lg:pt-44">
+    <div class="mx-auto flex w-full flex-col gap-8 md:max-w-[440px]">
+      <div class="flex flex-col gap-6 px-4 text-center">
+        <div class="relative z-0">
+          <!-- <img
+            class="relative mx-auto h-12 w-12"
+            src="{{ 'logomark.png' | asset_url }}"
+            alt="Logomark"
+            loading="lazy"
+            width="48"
+            height="48"
+          > -->
+        </div>
+        <div class="relative z-10 flex flex-col gap-2 md:gap-3">
+          <h1 class="font-display text-display-xs font-semibold text-primary md:text-display-sm">
+            Create an account
+          </h1>
+          <p class="text-tertiary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+
+      <form class="flex flex-col gap-6 px-4 py-8 md:rounded-lg md:px-10 md:shadow-md" action="">
+        <div class="flex flex-col gap-1.5 lg:flex-1">
+          <label class="text-sm font-medium text-secondary" for="first-name">First name</label>
+          <input
+            class="rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="first-name"
+            name="customer[first_name]"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5 lg:flex-1">
+          <label class="text-sm font-medium text-secondary" for="last-name">Last name</label>
+          <input
+            class="rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="last-name"
+            name="customer[last_name]"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5 lg:flex-1">
+          <label class="text-sm font-medium text-secondary" for="email-address">
+            Email address
+          </label>
+          <input
+            class="rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="email-address"
+            name="customer[email]"
+            type="email"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5 lg:flex-1">
+          <label class="text-sm font-medium text-secondary" for="password">Password</label>
+          <input
+            class="rounded border border-primary-border bg-primary-bg px-3.5 py-2.5 text-primary shadow-xs transition focus:border-brand-border focus:outline-none focus:ring-4 focus:ring-brand-600/25 data-error:border-error-border data-error:ring-error-500/25"
+            id="password"
+            name="customer[last_name]"
+            type="password"
+          />
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <button
+            class="rounded bg-brand-600 px-4 py-2.5 font-semibold text-white transition-colors hover:bg-brand-700 focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-600/25"
+            type="submit"
+          >
+            Get started
+          </button>
+        </div>
+      </form>
+
+      <div class="flex justify-center gap-1">
+        <p class="text-sm text-tertiary">Already have an account?</p>
+        <a class="text-sm font-semibold text-button-tertiary-color-fg" href="/account/login">
+          Log in
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
