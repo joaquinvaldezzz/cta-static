@@ -2,11 +2,11 @@ const colors = require('../../colors')
 
 module.exports = {
   'button-tertiary-color-fg': {
-    DEFAULT: colors.light[700],
+    DEFAULT: colors.brand[700],
     dark: colors.dark[300],
 
     hover: {
-      DEFAULT: colors.light[800],
+      DEFAULT: colors.brand[800],
       dark: colors.dark[100],
     },
   },
