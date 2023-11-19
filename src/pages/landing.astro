@@ -1,0 +1,99 @@
+---
+import Layout from '~/layouts/Layout.astro'
+---
+
+<Layout title="Landing page">
+  <div class="dark relative pb-32 pt-[8.5rem] lg:pb-40 lg:pt-48">
+    <div
+      class="absolute inset-0 z-10 h-full w-full bg-gradient-to-t from-gray-modern-950 to-gray-modern-950/50 opacity-70"
+    >
+    </div>
+    <img
+      class="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover"
+      src="https://images.unsplash.com/photo-1533091917107-98f819e4cb54?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt=""
+      loading="lazy"
+      width="1440"
+      height="720"
+    />
+
+    <div class="container relative z-20 flex flex-col gap-12">
+      <div class="flex max-w-screen-md flex-col gap-5">
+        <h1
+          class="font-display text-display-md font-semibold text-primary-dark md:text-display-lg lg:text-display-xl xl:text-display-2xl"
+        >
+          Elevate your expertise with our expert-led training courses
+        </h1>
+        <p class="text-lg text-secondary-dark md:text-xl">
+          We offer more than 1,500 acres of land along with 50 different shooting ranges full of
+          exciting activities for the gun enthusiast.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3 md:flex-row">
+        <a
+          class="rounded bg-button-primary-bg px-4.5 py-3 text-center font-semibold text-button-primary-fg transition hover:bg-button-primary-bg-hover focus:outline-none focus:ring-4 focus:ring-brand-600/25 md:px-5.5 md:py-4"
+          href="#"
+        >
+          Book now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-16 lg:py-24">
+    <div class="container flex flex-col gap-12 lg:gap-16">
+      <div class="flex max-w-screen-md flex-col gap-4">
+        <h2
+          class="font-display text-display-sm font-semibold tracking-tight text-primary dark:text-primary-dark lg:text-display-lg"
+        >
+          California Tactical Academy Experiences
+        </h2>
+        <p class="text-lg text-tertiary dark:text-tertiary-dark lg:text-xl">
+          Lorem ipsum dolor sit amet consectetur. Aenean volutpat ornare arcu magnis sociis id arcu
+          amet id. Est aliquam risus ac dui rhoncus metus vitae facilisis cras.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="flex flex-col gap-8">
+          <div class="h-80">
+            <img
+              class="h-full w-full object-cover"
+              src=""
+              alt=""
+              loading="eager"
+              width="320"
+              height="320"
+            />
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+              <h3
+                class="font-display text-display-xs font-semibold text-primary dark:text-primary-dark lg:text-display-md"
+              >
+                Training Courses
+              </h3>
+              <p class="text-lg text-tertiary dark:text-tertiary-dark">
+                Lorem ipsum dolor sit amet consectetur. Platea lorem libero eu nunc sodales.
+              </p>
+            </div>
+
+            <div>
+              <a
+                class="inline-flex items-center gap-2 font-semibold text-button-tertiary-fg transition hover:text-button-tertiary-fg-hover dark:text-button-primary-fg-dark dark:hover:text-button-tertiary-fg-hover-dark"
+                href="#"
+              >
+                <span>Learn more</span>
+                <div class="h-5 w-5">
+                  <!-- {%- render 'link-external' -%} -->
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
