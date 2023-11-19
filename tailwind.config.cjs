@@ -30,10 +30,7 @@ module.exports = {
     './src/sections/**/*.astro',
     './src/snippets/**/*.astro',
   ],
-  // darkMode: 'class',
-  future: {
-    disableColorOpacityUtilitiesByDefault: true,
-  },
+  darkMode: 'class',
 
   theme: {
     container: {
