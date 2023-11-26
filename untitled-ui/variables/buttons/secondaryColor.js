@@ -21,7 +21,7 @@ module.exports = {
     },
   },
 
-  'button-secondary-border': {
+  'button-secondary-color-border': {
     DEFAULT: colors.brand[300],
     dark: colors.dark[700],
 
