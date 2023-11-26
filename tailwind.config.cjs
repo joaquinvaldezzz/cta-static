@@ -31,6 +31,9 @@ module.exports = {
     './src/snippets/**/*.astro',
   ],
   darkMode: 'class',
+  future: {
+    disableColorOpacityUtilitiesByDefault: true,
+  },
 
   theme: {
     container: {
