@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/Layout.astro'
+---
+
+<Layout title="404">
+  <div class="mt-header py-16 lg:py-24">
+    <div class="container">
+      <div class="flex flex-col gap-8 lg:gap-12">
+        <div class="flex flex-col gap-4 lg:gap-6">
+          <div class="flex flex-col items-start gap-3">
+            <div class="font-semibold text-brand-secondary">404 error</div>
+            <h1 class="font-display text-display-md font-semibold text-primary lg:text-display-xl">
+              We can't find that page
+            </h1>
+          </div>
+          <p class="text-lg text-tertiary lg:text-xl">
+            Sorry, the page you are looking for doesn't exist or has been moved.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3 lg:flex-row">
+          <a
+            class="flex items-center justify-center gap-1.5 rounded border border-button-primary-border bg-button-primary-bg px-4.5 py-3 font-semibold text-button-primary-fg shadow-xs transition hover:border-button-primary-border-hover hover:bg-button-primary-bg-hover focus:outline-none focus:ring-4 focus:ring-brand-600/25 lg:order-2 lg:px-[1.375rem] lg:py-4 lg:text-lg"
+            href="/"
+          >
+            Take me home
+          </a>
+          <a
+            class="flex items-center justify-center gap-1.5 rounded border border-button-secondary-border bg-button-secondary-bg px-4.5 py-3 font-semibold text-button-secondary-fg shadow-xs transition hover:border-button-secondary-border-hover hover:bg-button-secondary-bg-hover focus:outline-none focus:ring-4 focus:ring-light-400/10 lg:order-1 lg:px-[1.375rem] lg:py-4 lg:text-lg"
+            href="#"
+          >
+            Go back
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
