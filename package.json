@@ -7,7 +7,6 @@
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier --write .",
-    "format:astro": "prettier --write src/**/*.astro",
     "lint": "eslint --ext .js",
     "preview": "astro preview",
     "start": "astro dev"
@@ -25,7 +24,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.1",
+    "eslint-plugin-prettier": "^5.1.2",
     "postcss": "^8.4.32",
     "postcss-import": "^15.1.0",
     "postcss-sort-media-queries": "^5.2.0",
